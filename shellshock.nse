@@ -11,7 +11,7 @@ Checks if the webserver is vulnerable to shellshock. Based on http://blog.errata
 author = "Eric Gragsone <eric.gragsone@erisresearch.org>
 license = "Same as Nmap--See http://nmap.org/book/man-legal.html"
 
-categories = {'vuln'}
+categories = {'vuln','intrusive'}
 
 -- The Rule Section --
 
