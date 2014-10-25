@@ -1,0 +1,12 @@
+SF-Port2555-TCP:V=6.46
+
+(GenericLines,181,"HTTP/1\.0\x20400\x20Bad\x20Request\r\nContent-Type:\x20text/html\r\nCache-Control:\x20public\r\nPragma:\x20cache\r\nExpires:\x20Wed,\x2022\x20Oct\x202014\x2019:40:14\x20GMT\r\nDate:\x20Wed,\x2022\x20Oct\x202014\x2019:40:14\x20GMT\r\nLast-Modified:\x20Wed,\x2022\x20Oct\x202014\x2019:40:14\x20GMT\r\nAccept-Ranges:\x20bytes\r\nConnection:\x20close\r\n\r\n<html>\n<head>\n\x20\x20<title>400\x20Bad\x20Request</title>\n</head>\n<body\x20bgcolor=\"ffffff\">\n\x20\x20<h2>400\x20Bad\x20Request<h2>\n\x20\x20<p>\n\x20\x20\n</body>\n</html>\n")
+
+(GetRequest,1A9,"HTTP/1\.0\x20500\x20Internal\x20Server\x20Error\r\nContent-Type:\x20text/html\r\nCache-Control:\x20public\r\nPragma:\x20cache\r\nExpires:\x20Wed,\x2022\x20Oct\x202014\x2019:40:15\x20GMT\r\nDate:\x20Wed,\x2022\x20Oct\x202014\x2019:40:15\x20GMT\r\nLast-Modified:\x20Wed,\x2022\x20Oct\x202014\x2019:40:15\x20GMT\r\nAccept-Ranges:\x20bytes\r\nConnection:\x20close\r\n\r\n<html>\n<head>\n\x20\x20<title>500\x20Internal\x20Server\x20Error</title>\n</head>\n<body\x20bgcolor=\"ffffff\">\n\x20\x20<h2>500\x20Internal\x20Server\x20Error<h2>\n\x20\x20<p>\n\x20\x20CGI\x20Failed\n</body>\n</html>\n")
+
+(HTTPOptions,18D,"HTTP/1\.0\x20501\x20Not\x20Implemented\r\nContent-Type:\x20text/html\r\nCache-Control:\x20public\r\nPragma:\x20cache\r\nExpires:\x20Wed,\x2022\x20Oct\x202014\x2019:40:15\x20GMT\r\nDate:\x20Wed,\x2022\x20Oct\x202014\x2019:40:15\x20GMT\r\nLast-Modified:\x20Wed,\x2022\x20Oct\x202014\x2019:40:15\x20GMT\r\nAccept-Ranges:\x20bytes\r\nConnection:\x20close\r\n\r\n<html>\n<head>\n\x20\x20<title>501\x20Not\x20Implemented</title>\n</head>\n<body\x20bgcolor=\"ffffff\">\n\x20\x20<h2>501\x20Not\x20Implemented<h2>\n\x20\x20<p>\n\x20\x20\n</body>\n</html>\n")
+
+(RTSPRequest,18D,"HTTP/1\.0\x20501\x20Not\x20Implemented\r\nContent-Type:\x20text/html\r\nCache-Control:\x20public\r\nPragma:\x20cache\r\nExpires:\x20Wed,\x2022\x20Oct\x202014\x2019:40:15\x20GMT\r\nDate:\x20Wed,\x2022\x20Oct\x202014\x2019:40:15\x20GMT\r\nLast-Modified:\x20Wed,\x2022\x20Oct\x202014\x2019:40:15\x20GMT\r\nAccept-Ranges:\x20bytes\r\nConnection:\x20close\r\n\r\n<html>\n<head>\n\x20\x20<title>501\x20Not\x20Implemented</title>\n</head>\n<body\x20bgcolor=\"ffffff\">\n\x20\x20<h2>501\x20Not\x20Implemented<h2>\n\x20\x20<p>\n\x20\x20\n</body>\n</html>\n");
+
+
+This is an UPnP service
