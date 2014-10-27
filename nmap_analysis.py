@@ -1,3 +1,6 @@
+#!/usr/bin/python
+
+import sys
 from libnmap.parser import NmapParser
 
 def result_filter(script_result):
@@ -44,61 +47,64 @@ def result_filter(script_result):
 
     return report
 
-nmap_report = NmapParser.parse_fromfile('test.xml')
-print "Nmap scan summary: {0}".format(nmap_report.summary)
+if len(sys.argv) != 2:
+    print 'Usage: '+sys.argv[0]+' <nmapreport.xml>'
+else:
+    nmap_report = NmapParser.parse_fromfile('test.xml')
+    print "Nmap scan summary: {0}".format(nmap_report.summary)
 
+    empty_hosts=[]
+    unknown_ports = {}
 
-empty_hosts=[]
-unknown_ports = {}
-
-for scanned_hosts in nmap_report.hosts:
-    if len(scanned_hosts.get_open_ports()) > 0:
-        if len(scanned_hosts.os_match_probabilities()) > 0:
-            print scanned_hosts.address+' '+scanned_hosts.mac+' '+scanned_hosts.os_match_probabilities()[0].name
-        else:
-            print scanned_hosts.address+' '+scanned_hosts.mac
-
-        if len(scanned_hosts.hostnames):
-            print scanned_hosts.hostnames
-
-        for ports in scanned_hosts.get_open_ports():
-            print str(ports[0])+'/'+ports[1]
-            service=scanned_hosts.get_service(ports[0], ports[1])
-
-            if service.banner != '':
-                print '- '+service.banner
-
-                for scripts in service.scripts_results:
-                    data=result_filter(scripts)
-
-                    if data != '':
-                        print data
-
+    for scanned_hosts in nmap_report.hosts:
+        if len(scanned_hosts.get_open_ports()) > 0:
+            if len(scanned_hosts.os_match_probabilities()) > 0:
+                print scanned_hosts.address+' '+scanned_hosts.mac+' '+scanned_hosts.os_match_probabilities()[0].name
             else:
-                print '- unknown'
+                print scanned_hosts.address+' '+scanned_hosts.mac
 
-                if service.servicefp != '':
-                    key=scanned_hosts.address+':'+str(ports[0])+'/'+ports[1]
-                    unknown_ports[key]='\n'.join(service.servicefp.split("%r")[1:])
+            if len(scanned_hosts.hostnames):
+                print scanned_hosts.hostnames
+
+            for ports in scanned_hosts.get_open_ports():
+                print str(ports[0])+'/'+ports[1]
+                service=scanned_hosts.get_service(ports[0], ports[1])
+
+                if service.banner != '':
+                    print '- '+service.banner
+
+                    for scripts in service.scripts_results:
+                        data=result_filter(scripts)
+
+                        if data != '':
+                            print data
+                else:
+                    print '- unknown'
+
+                    if service.servicefp != '':
+                        key=scanned_hosts.address+':'+str(ports[0])+'/'+ports[1]
+                        unknown_ports[key]='\n'.join(service.servicefp.split("%r")[1:])
+
+            print ''
+        else:
+            empty_hosts.append(scanned_hosts.address)
+
+    if (empty_hosts) > 0:
+        print '-------------------------'
+        print 'Hosts up with no open ports:'
+
+        for host in empty_hosts:
+            print host
 
         print ''
-    else:
-        empty_hosts.append(scanned_hosts.address)
-
-if (empty_hosts) > 0:
-    print 'Hosts up with no open ports:'
-
-    for host in empty_hosts:
-        print host
-
-    print ''
 
 
-if unknown_ports != {}:
-    print 'Unknown ports:'
+    if unknown_ports != {}:
+        print '-------------------------'
+        print 'Unknown ports:'
 
-    for key in unknown_ports.keys():
-        print key
-        print unknown_ports[key]
-        print ''
+        for key in unknown_ports.keys():
+            print key
+            print unknown_ports[key]
+            print ''
 
