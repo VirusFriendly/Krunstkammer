@@ -16,7 +16,6 @@ SF-Port41100-TCP:V=6.46
 
 (NCP,23,"Dm\x04\0\0\0\0\x17\0\0\0\x01\0\0\xb7z\x05\0\0@\x0b\0EclrErrors\0\0\0")
 
-(kumo-server,23,"\x94\0\x04\0\0\0\x91\x03\0\0\0\x02\0\0\xd6\xf9\x05\0\0@\x
-SF:0b\0EclrErrors\0\0\0");
+(kumo-server,23,"\x94\0\x04\0\0\0\x91\x03\0\0\0\x02\0\0\xd6\xf9\x05\0\0@\x0b\0EclrErrors\0\0\0");
 
 found on a pheonix contact device using an eCLR chip
