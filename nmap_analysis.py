@@ -50,7 +50,7 @@ def result_filter(script_result):
 if len(sys.argv) != 2:
     print 'Usage: '+sys.argv[0]+' <nmapreport.xml>'
 else:
-    nmap_report = NmapParser.parse_fromfile('test.xml')
+    nmap_report = NmapParser.parse_fromfile(sys.argv[1])
     print "Nmap scan summary: {0}".format(nmap_report.summary)
 
     empty_hosts=[]
