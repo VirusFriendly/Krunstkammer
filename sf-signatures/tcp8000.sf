@@ -1,0 +1,14 @@
+8000/tcp
+(RPCCheck,16,"\x01\0\x08\n\0\0\x04\x08\0\0\x07\x01\0\x08\n\0\0\x04\x08\0\0\x07")
+
+(Kerberos,B,"\x01\0\x08\n\0\x81\x04\x08\0k\x07")
+
+(SMBProgNeg,21,"\x01\0\x08\n\0\0\x04\x08\0\0\x07\x01\0\x08\n\0\0\x04\x08\0\0\x07\x01\0\x08\n\0\0\x04\x08\0\0\x07")
+
+(TerminalServer,B,"\x01\0\x08\n\0\0\x04\x08\0\0\x07")
+
+(NotesRPC,B,"\x01\0\x08\n\0\0\x04\x08\0\0\x07")
+
+(WMSRequest,B,"\x01\0\x08\n\0\0\x04\x08\0\0\x07");
+
+Cisco (Scientific America) DVR

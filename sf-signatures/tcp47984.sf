@@ -1,0 +1,4 @@
+47984/tcp
+(GenericLines,6E,"HTTP/1\.1\x20500\x20Server\x20Error\r\nContent-Length:\x2042\r\nConnection:\x20close\r\n\r\nError\x20500:\x20Server\x20Error\nBad\x20request:\x20\[\r\n\r\]");
+
+Windows 7 (Pri)

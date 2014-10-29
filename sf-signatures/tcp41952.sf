@@ -1,0 +1,19 @@
+41952/tcp
+(GenericLines,F7,"HTTP/0\.0\x20400\x20Bad\x20Request\r\nServer:\x20Windows/6\.1\.7601/Service\x20Pack\x201,\x20UPnP/1\.0,\x20TVersity\x20Media\x20Server/3\.4\r\nConnection
+:\x20keep-alive\r\nContent-Length:\x2050\r\nContent-Type:\x20text/html\r\nAccept-Ranges:\x20bytes\r\n\r\n<html><body><h1>400\x20Bad\x20Request</h1></body></html>")
+
+(GetRequest,27C,"HTTP/1\.0\x20200\x20OK\r\nContent-Length:\x20364\r\nContent-Type:\x20text/html\r\nAccept-Ranges:\x20bytes\r\nDATE:\x20Mon,\x2027\x20Oct\x202014\x2020:33:3
+7\x20GMT\r\nLAST-MODIFIED:\x20Tue,\x2009\x20Sep\x202014\x2021:11:54\x20GMT\r\nServer:\x20Windows/6\.1\.7601/Service\x20Pack\x201,\x20UPnP/1\.0,\x20TVersity\x20Media\x20Ser
+ver/3\.4\r\nConnection:\x20keep-alive\r\n\r\n<!DOCTYPE\x20html\r\n\x20\x20PUBLIC\x20\"-//W3C//DTD\x20HTML\x204\.01\x20Transitional//EN\"\x20\"http://www\.w3\.org/TR/html4/
+loose\.dtd\">\r\n<html>\r\n\r\n<head/>\r\n<body>\r\n\t<script>\r\n\t\tif\x20\(navigator\.userAgent\.indexOf\(\"iPhone\"\)\x20>=\x200\x20\|\|\x20navigator\.userAgent\.index
+Of\(\"iPad\"\)\x20>=\x200\)\r\n\t\t\tself\.location\x20=\x20'/medialib/browse';\r\n\t\telse\r\n\t\t\tself\.location\x20=\x20'/client/media\.html';\r\n\t</script>\r\n</body
+>\r\n\r\n</html>\r\n\r\n")
+
+(HTTPOptions,FF,"HTTP/1\.0\x20501\x20Not\x20Implemented\r\nServer:\x20Windows/6\.1\.7601/Service\x20Pack\x201,\x20UPnP/1\.0,\x20TVersity\x20Media\x20Server/3\.4\r\nConnect
+ion:\x20keep-alive\r\nContent-Length:\x2054\r\nContent-Type:\x20text/html\r\nAccept-Ranges:\x20bytes\r\n\r\n<html><body><h1>501\x20Not\x20Implemented</h1></body></html>")
+
+(RPCCheck,F7,"HTTP/0\.0\x20400\x20Bad\x20Request\r\nServer:\x20Windows/6\.1\.7601/Service\x20Pack\x201,\x20UPnP/1\.0,\x20TVersity\x20Media\x20Server/3\.4\r\nConnection:\x20keep-alive\r\nContent-Length:\x2050\r\nContent-Type:\x20text/html\r\nAccept-Ranges:\x20bytes\r\n\r\n<html><body><h1>400\x20Bad\x20Request</h1></body></html>")
+
+(FourOhFourRequest,F3,"HTTP/1\.0\x20404\x20Not\x20Found\r\nServer:\x20Windows/6\.1\.7601/Service\x20Pack\x201,\x20UPnP/1\.0,\x20TVersity\x20Media\x20Server/3\.4\r\nConnection:\x20keep-alive\r\nContent-Length:\x2048\r\nContent-Type:\x20text/html\r\nAccept-Ranges:\x20bytes\r\n\r\n<html><body><h1>404\x20Not\x20Found</h1></body></html>");
+
+Windows 7 (DoM)
