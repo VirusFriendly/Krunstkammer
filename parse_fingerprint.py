@@ -41,7 +41,6 @@ def find_fingerprints(report):
     
     return fingerprints
 
-
 def process_fingerprint(fingerprint):
     """Determines if the fingerprint is a Service or OS fingerprint and has the appropriate method process it
 
@@ -49,7 +48,8 @@ def process_fingerprint(fingerprint):
         fingerprint (string): A fingerprint block, potentially produced by find_fingerprints()
     
     Returns:
-        string: Reports on the data contained in the fingerprint block
+        string: Type of fingerprint processes: OS or SF
+        dict: contents of the parsed fingerprint
     """
     fingerprint_type = fingerprint[:3]  # Preserve the header for post trimming
 
@@ -60,69 +60,42 @@ def process_fingerprint(fingerprint):
     fingerprint = ''.join([line[3:] for line in fingerprint.splitlines()]).encode('latin1').decode("unicode-escape")
     
     if fingerprint_type == "OS:":
-        return "# NMAP OS Fingerprint\n"+os_fingerprint(fingerprint)+'\n'
+        return "OS", parse_os_fingerprint(fingerprint)
     
-    return "# NMAP Service Fingerprint\n"+service_fingerprint(fingerprint)+'\n'
+    return "SF", parse_svc_fingerprint(fingerprint)
 
-
-def service_fingerprint(fingerprint):
-    """Formats Service fingerprints in the style of fingerprint-strings.nse
-    
-    See: https://nmap.org/nsedoc/scripts/fingerprint-strings.html
+def parse_svc_fingerprint(fingerprint):
+    """Parses a Service Fingerprint into an ordered dictionary
 
     Args:
         fingerprint (string): A baked Service fingerprint block
     
     Returns:
-        string: Reports the strings sent back in response to various Nmap probes
+        dict: contents of the parsed fingerprint
     """
     assert(fingerprint[:4] == "Port")
     data = fingerprint[4:]
-    report = list()
+    categories = dict()
 
     # Parse Port Number
-    port = data[:data.find(':')]
-    data = data[len(port)+1:]
+    categories["Port"] = data[:data.find(':')]
+    data = data[data.find(':')+1:]
 
     # Parse Scan Line
-    scan_line = dict()
+    categories["SCAN"] = dict()
 
     while data[0] in "VIDTP":
         scan = data[:data.find('%')]
         data = data[len(scan)+1:]
 
         if scan[0] in 'VIPD':
-            scan_line[scan[0]] = scan[2:]
+            categories["SCAN"][scan[0]] = scan[2:]
         elif scan[:4] == "Time":
-            since_epoch = int(scan[5:], 16)
-            scan_line["Time"] = time.strftime('%H:%M:%S', time.gmtime(since_epoch/1000.))
+            categories["SCAN"]["Time"] = scan[5:]
         else:
             raise Exception("Unknown Scan Line Variable")
     
-    if 'V' in scan_line.keys():
-        report.append("Nmap Version: " + scan_line['V'])
-    
-    if 'P' in scan_line.keys():
-        report.append("Platform: " + scan_line['P'])
-    
-    if 'D' in scan_line.keys():
-        timestamp = ''
-
-        if "Time" in scan_line.keys():
-            timestamp = scan_line["Time"]
-        
-        month, day = scan_line['D'].split('/')
-        months = ['Null', 'January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December']
-        report.append(' '.join(["Date:", months[int(month)], day, timestamp]))
-    
-    if 'I' in scan_line.keys():
-        # No idea yet what this is for
-        report.append("I=" + scan_line['I'])
-    
-    report.append(port[:port.find('-')] + '/' + port[port.find('-')+1:].lower())
-    
-    # Parse Probe Responses
-    probe_responses = dict()
+    categories["Strings"] = list()
 
     while data[:2] == 'r(':
         probe = data[2:data.find(',')]
@@ -137,7 +110,53 @@ def service_fingerprint(fingerprint):
         
         response = data[:response_len]
         data = data[response_len+3:]
+        categories["Strings"].append((probe, response))
+    
+    return categories
 
+def svc_fingerprint_report(categories):
+    """Formats Service fingerprints in the style of fingerprint-strings.nse
+    
+    See: https://nmap.org/nsedoc/scripts/fingerprint-strings.html
+
+    Args:
+        categories (dict): Contents of a service fingerprint
+    
+    Returns:
+        string: A formatted report of the service fingerprint data
+    """
+    report = list()
+    report.append("# NMAP Service Fingerprint")
+    
+    if 'V' in categories["SCAN"].keys():
+        report.append("Nmap Version: " + categories["SCAN"]['V'])
+    
+    if 'P' in categories["SCAN"].keys():
+        report.append("Platform: " + categories["SCAN"]['P'])
+    
+    if 'D' in categories["SCAN"].keys():
+        timestamp = ''
+
+        if "Time" in categories["SCAN"].keys():
+            since_epoch = int(categories["SCAN"]["Time"], 16)
+            timestamp = time.strftime('%H:%M:%S', time.gmtime(since_epoch/1000.))
+        
+        month, day = categories["SCAN"]['D'].split('/')
+        months = ['Null', 'January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December']
+        report.append(' '.join(["Date:", months[int(month)], day, timestamp]))
+    
+    if 'I' in categories["SCAN"].keys():
+        # No idea yet what this is for
+        report.append("I=" + categories["SCAN"]['I'])
+    
+    if "Port" in categories["SCAN"].keys():
+        port = categories["SCAN"]["Port"]
+        report.append(port[:port.find('-')] + '/' + port[port.find('-')+1:].lower())
+    
+    # Parse Probe Responses
+    probe_responses = dict()
+
+    for probe, response in categories["Strings"]:
         if response not in probe_responses.keys():
             probe_responses[response] = list()
         
@@ -148,11 +167,12 @@ def service_fingerprint(fingerprint):
     for response in probe_responses.keys():
         report.append("|  " + ", ".join(probe_responses[response]) + ':')
         report.append("|    "+"|    ".join(response.splitlines(keepends=True)))
+    
+    report.append('')
 
     return '\n'.join(report)
 
-
-def os_fingerprint(fingerprint):
+def parse_os_fingerprint(fingerprint):
     """Formats OS fingerprints in a readable format
 
     See: https://nmap.org/book/osdetect-fingerprint-format.html
@@ -166,7 +186,6 @@ def os_fingerprint(fingerprint):
     data = fingerprint
     categories = dict()
     categories["SEQ"] = list()
-    report = list()
 
     # Parse OS Fingerprint
     while len(data) > 0 and data[0] in "SOWETUI":
@@ -193,6 +212,22 @@ def os_fingerprint(fingerprint):
 
             categories[category] = testpairs
     
+    return categories
+
+def os_fingerprint_report(categories):
+    """Formats OS fingerprints in a readable format
+
+    See: https://nmap.org/book/osdetect-fingerprint-format.html
+
+    Args:
+        categories (dict): Contents of a service fingerprint
+    
+    Returns:
+        string: A formatted report of the service fingerprint data
+    """
+    report = list()
+    report.append("# NMAP OS Fingerprint")
+
     # Parse Scanline Results
     if "SCAN" in categories.keys():
         category = categories["SCAN"]
@@ -354,18 +389,19 @@ def os_fingerprint(fingerprint):
             pass
 
         report.append(f"{test_categories[category]} ({category})")
-        report.append(parse_test_results(categories[category]))
+        report.append(report_test_results(categories[category]))
     
     
     for category in categories.keys():
         if category not in ["SCAN", "SEQ", "OPS", "WIN", "ECN", "T1", "T2", "T3", "T4", "T5", "T6", "T7", "U1", "IE"]:
             raise ValueError
+    
+    report.append('')
 
     return '\n'.join(report)
 
-
-def parse_test_results(tests):
-    """Parses results from the OS Scan Probes
+def report_test_results(tests):
+    """Reports results from the OS Scan Probes
 
     These test results are common across multiple categories
 
@@ -562,8 +598,7 @@ def parse_test_results(tests):
     
     return '\n'.join(report)
 
-
-def clean_fingerprint(fingerprint):
+def strip_fingerprint(fingerprint):
     """ If you just want to remove the Nmap format. Great for Debugging!
 
     Args:
@@ -581,5 +616,12 @@ if __name__ == '__main__':
         fingerprints = find_fingerprints(f.read())
 
         for fingerprint in fingerprints:
-            print(process_fingerprint(fingerprint))
+            fp_type, data = process_fingerprint(fingerprint)
+
+            if fp_type == "OS":
+                print(os_fingerprint_report(data))
+            elif fp_type == "SF":
+                print(svc_fingerprint_report(data))
+            else:
+                raise ValueError
 
