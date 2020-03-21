@@ -189,6 +189,11 @@ If there's interest maybe I'll add a method for exporting it as xml or json.
 ##  brief-nmap
 This is a personal nmap results filter that probably wont be useful to most people who are not me. If it is though, I'm glad it is!
 
+### Security Advisory
+This script depends on python-libnmap which is vulnerable to an XML injection (CVE-2019-1010017). There isn't a patched version as of this writing. This shouldn't be an issue if you're using this script on Nmap generated XML files that you trust. I would not advise creating a webservice based on this script and allowing anyone to upload an XML file.
+
+You've been warned.
+
 ### Example Output
     Nmap scan summary: Nmap done at Sat Mar 21 02:27:00 2020; 256 IP addresses (4 hosts up) scanned in 25963.82 seconds
     192.168.0.4 
