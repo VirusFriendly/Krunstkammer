@@ -1,14 +1,14 @@
-9999/tcp
-(GetRequest,9A,"HTTP/1\.1\x20404\x20Page\x20not\x20found\r\nContent-type:\x20text/html\r\nContent-length:\x2031\r\nServer:\x20Cisco-MWEB/1\.8\.225\r\nConnection:\x20close\r\n\r\n<h1>Error</h1>Page\x20not\x20found!\r\n")
-
-(HTTPOptions,9A,"HTTP/1\.1\x20404\x20Page\x20not\x20found\r\nContent-type:\x20text/html\r\nContent-length:\x2031\r\nServer:\x20Cisco-MWEB/1\.8\.225\r\nConnection:\x20close\r\n\r\n<h1>Error</h1>Page\x20not\x20found!\r\n")
-
-(FourOhFourRequest,9A,"HTTP/1\.1\x20404\x20Page\x20not\x20found\r\nContent-type:\x20text/html\r\nContent-length:\x2031\r\nServer:\x20Cisco-MWEB/1\.8\.225\r\nConnection:\x20close\r\n\r\n<h1>Error</h1>Page\x20not\x20found!\r\n")
-
-(RTSPRequest,9A,"HTTP/1\.1\x20404\x20Page\x20not\x20found\r\nContent-type:\x20text/html\r\nContent-length:\x2031\r\nServer:\x20Cisco-MWEB/1\.8\.225\r\nConnection:\x20close\r\n\r\n<h1>Error</h1>Page\x20not\x20found!\r\n")
-
-(SIPOptions,9A,"HTTP/1\.1\x20404\x20Page\x20not\x20found\r\nContent-type:\x20text/html\r\nContent-length:\x2031\r\nServer:\x20Cisco-MWEB/1\.8\.225\r\nConnection:\x20close\r\n\r\n<h1>Error</h1>Page\x20not\x20found!\r\n");
-
 Cisco DLNA UPnP port.
 /upnp_descriptor_0
 /scpd/ContentDirectory_DMS
+
+9999/tcp
+  GetRequest, HTTPOptions, FourOhFourRequest, RTSPRequest, SIPOptions
+    HTTP/1\.1 404 Page not found
+    Content-type: text/html
+    Content-length: 31
+    Server: Cisco-MWEB/1\.8\.225
+    Connection: close
+
+    <h1>Error</h1>Page not found!
+

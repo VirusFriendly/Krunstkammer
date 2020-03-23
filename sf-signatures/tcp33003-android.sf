@@ -1,13 +1,22 @@
+This was on my personal Samsung phone.
+
+Searching for DoaHTTP server show up other Samsung specific data, but not a lot of actual details. Worthy of further research.
+
 33003/tcp
-(GetRequest,B0,"HTTP/1\.1\x20404\x20Not\x20Found\r\nContent-Type:\x20text/html;\x20charset=\"utf-8\"\r\nServer:\x20Linux/2\.6\.35\.11-T769UVLF5-CL946413\x20DoaHTTP\r\nContent-Length:\x200\r\nDate:\x20Mon,\x2027\x20Oct\x202014\x2016:33:26\x20GMT\r\n\r\n")
+  GetRequest, FourOhFourRequest
+    HTTP/1\.1 404 Not Found
+    Content-Type: text/html; charset=\"utf-8\"
+    Server: Linux/2\.6\.35\.11-T769UVLF5-CL946413 DoaHTTP
+    Content-Length: 0
+    Date: Mon, 27 Oct 2014 16:33:26 GMT
 
-(HTTPOptions,B2,"HTTP/1\.1\x20400\x20Bad\x20Request\r\nContent-Type:\x20text/html;\x20charset=\"utf-8\"\r\nServer:\x20Linux/2\.6\.35\.11-T769UVLF5-CL946413\x20DoaHTTP\r\nContent-Length:\x200\r\nDate:\x20Mon,\x2027\x20Oct\x202014\x2016:33:26\x20GMT\r\n\r\n")
 
-(RTSPRequest,B2,"HTTP/1\.1\x20400\x20Bad\x20Request\r\nContent-Type:\x20text/html;\x20charset=\"utf-8\"\r\nServer:\x20Linux/2\.6\.35\.11-T769UVLF5-CL946413\x20DoaHTTP\r\nContent-Length:\x200\r\nDate:\x20Mon,\x2027\x20Oct\x202014\x2016:33:26\x20GMT\r\n\r\n")
 
-(FourOhFourRequest,B0,"HTTP/1\.1\x20404\x20Not\x20Found\r\nContent-Type:\x20text/html;\x20charset=\"utf-8\"\r\nServer:\x20Linux/2\.6\.35\.11-T769UVLF5-CL946413\x20DoaHTTP\r\nContent-Length:\x200\r\nDate:\x20Mon,\x2027\x20Oct\x202014\x2016:34:10\x20GMT\r\n\r\n")
+  HTTPOptions, RTSPRequest, SIPOptions
+    HTTP/1\.1 400 Bad Request
+    Content-Type: text/html; charset=\"utf-8\"
+    Server: Linux/2\.6\.35\.11-T769UVLF5-CL946413 DoaHTTP
+    Content-Length: 0
+    Date: Mon, 27 Oct 2014 16:33:26 GMT
 
-(SIPOptions,B2,"HTTP/1\.1\x20400\x20Bad\x20Request\r\nContent-Type:\x20text/html;\x20charset=\"utf-8\"\r\nServer:\x20Linux/2\.6\.35\.11-T769UVLF5-CL946413\x20DoaHTTP\r\nContent-Length:\x200\r\nDate:\x20Mon,\x2027\x20Oct\x202014\x2016:34:20\x20GMT\r\n\r\n");
 
-Samsung Electronics:93:6E:E1
-personal phone

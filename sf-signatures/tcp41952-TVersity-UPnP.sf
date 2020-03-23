@@ -1,0 +1,60 @@
+tversity media server on Windows 7
+
+41952/tcp
+  GenericLines, RPCCheck
+    HTTP/0\.0 400 Bad Request
+    Server: Windows/6\.1\.7601/Service Pack 1, UPnP/1\.0, TVersity Media Server/3\.4
+    Connection: keep-alive
+    Content-Length: 50
+    Content-Type: text/html
+    Accept-Ranges: bytes
+
+    <html><body><h1>400 Bad Request</h1></body></html>
+
+  GetRequest
+    HTTP/1\.0 200 OK
+    Content-Length: 364
+    Content-Type: text/html
+    Accept-Ranges: bytes
+    DATE: Mon, 27 Oct 2014 20:33:37 GMT
+    LAST-MODIFIED: Tue, 09 Sep 2014 21:11:54 GMT
+    Server: Windows/6\.1\.7601/Service Pack 1, UPnP/1\.0, TVersity Media Server/3\.4
+    Connection: keep-alive
+
+    <!DOCTYPE html
+      PUBLIC\x20\"-//W3C//DTD\x20HTML 4\.01 Transitional//EN\" \"http://www\.w3\.org/TR/html4/loose\.dtd\">
+    <html>
+
+    <head/>
+    <body>
+        <script>
+            if (navigator\.userAgent\.indexOf\(\"iPhone\"\) >= 0 \|\| navigator\.userAgent\.indexOf\(\"iPad\"\) >= 0\)
+                self\.location = '/medialib/browse';
+            else
+                self\.location = '/client/media\.html';
+        </script>
+    </body>
+
+    </html>
+
+
+
+  HTTPOptions
+    HTTP/1\.0 501 Not Implemented
+    Server: Windows/6\.1\.7601/Service Pack 1, UPnP/1\.0, TVersity Media Server/3\.4
+    Connection: keep-alive
+    Content-Length: 54
+    Content-Type: text/html
+    Accept-Ranges: bytes
+
+    <html><body><h1>501 Not Implemented</h1></body></html>
+
+  FourOhFourRequest
+    HTTP/1\.0 404 Not Found
+    Server: Windows/6\.1\.7601/Service Pack 1, UPnP/1\.0, TVersity Media Server/3\.4
+    Connection: keep-alive
+    Content-Length: 48
+    Content-Type: text/html
+    Accept-Ranges: bytes
+
+    <html><body><h1>404 Not Found</h1></body></html>

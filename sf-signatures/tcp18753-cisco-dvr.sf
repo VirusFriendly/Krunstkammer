@@ -1,50 +1,5 @@
+This is from a Cisco (Scientific Atlantic) DVR set-top box provided by my ISP at the time (Either Comcast or Verizon)
+
 18753/tcp
-(GenericLines,10,"00000021BEC38167")
-
-(GetRequest,10,"00000021BEC38167")
-
-(HTTPOptions,10,"00000021BEC38167")
-
-(RTSPRequest,10,"00000021BEC38167")
-
-(RPCCheck,10,"00000021BEC38167")
-
-(DNSVersionBindReq,10,"00000021BEC38167")
-
-(DNSStatusRequest,10,"00000021BEC38167")
-
-(Help,10,"00000021BEC38167")
-
-(SSLSessionReq,10,"00000021BEC38167")
-
-(Kerberos,10,"00000021BEC38167")
-
-(SMBProgNeg,10,"00000021BEC38167")
-
-(X11Probe,10,"00000021BEC38167")
-
-(FourOhFourRequest,10,"00000021BEC38167")
-
-(LPDString,10,"00000021BEC38167")
-
-(LDAPBindReq,10,"00000021BEC38167")
-
-(SIPOptions,10,"00000021BEC38167")
-
-(LANDesk-RC,10,"00000021BEC38167")
-
-(TerminalServer,10,"00000021BEC38167")
-
-(NCP,10,"00000021BEC38167")
-
-(NotesRPC,10,"00000021BEC38167")
-
-(WMSRequest,10,"00000021BEC38167")
-
-(oracle-tns,10,"00000021BEC38167")
-
-(afp,10,"00000021BEC38167")
-
-(kumo-server,10,"00000021BEC38167");
-
-Cisco (Scientific Atlantic) DVR
+  GenericLines, GetRequest, HTTPOptions, RTSPRequest, RPCCheck, DNSVersionBindReq, DNSStatusRequest, Help, SSLSessionReq, Kerberos, SMBProgNeg, X11Probe, FourOhFourRequest, LPDString, LDAPBindReq, LDAPBindReq, SIPOptions, LANDesk-RC, TerminalServer, NCP, NotesRPC, WMSRequest, oracle-tns, afp, kumo-server
+    00000021BEC38167

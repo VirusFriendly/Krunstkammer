@@ -1,6 +1,42 @@
+Found on a Windows 7 system
+
+https://www.wibu.com/us/products/codemeter.html
+
+"Wibu-Systems | Software Protection, Software Licensing, Access Protection, Document Protection"
+
 22350/tcp
-(GetRequest,10B0,"HTTP/1\.1\x20200\x20OK\r\nServer:\x20WIBU-SYSTEMS\x20HTTP\x20Server/\x20Version\x203\.00\x20of\x20May/21/2012\r\nDate:\x202014-10-27\x2020:33:49\x20GMT\r\nConnection:\x20close\r\nContent-Type:\x20text/html;\x20charset=utf-8\r\nAccept-Ranges:\x20bytes\r\nContent-Length:\x204056\r\n\r\n<!DOCTYPE\x20html\x20PUBLIC\x20\"-//W3C//DTD\x20XHTML\x201\.0\x20Strict//EN\"\r\n\"http://www\.w3\.org/TR/xhtml1/DTD/xhtml1-strict\.dtd\">\r\n<html\x20xmlns=\"http://www\.w3\.org/1999/xhtml\">\r\n<head>\r\n\x20\x20<title>CodeMeter\x20\|\x20WebAdmin</title>\r\n\x20\x20<meta\x20http-equiv=\"Content-Type\"\x20content=\"text/html;charset=utf-8\"\x20/>\r\n\x20\x20<meta\x20name=\"WIBU-SYSTEMS\x20HTML\x20Served\x20Page\"\x20content=\"Data\"\x20/>\r\n\x20\x20<link\x20rel=\"stylesheet\"\x20href=\"Style\.css\"\x20type=\"text/css\"\x20media=\"screen\"\x20/>\r\n\x20\x20<link\x20rel=\"SHORTCUT\x20ICON\"\x20href=\"favicon\.ico\"\x20/>\r\n\r\n\x20\x20<!--\x20FileVersion=4\.50\.897\.500\x20-->\r\n\x20\x20<script\x20type=\"text/javascript\">\r\n\tfunction\x20popUpCenteredWindow\(\)\x20{\r\n\t\tvar\x20iMyWidth;\r\n\t\tvar\x20iMyHeight;\r\n\t\tiMyWidth\x20=\x20\(window\.screen\.width/2\)\x20-\x20\(100\x20\+\x2010\);\r\n\t\tiMyHeight\x20=\x20\(windo")
+  GetRequest
+    HTTP/1.1 200 OK
+    Server: WIBU-SYSTEMS HTTP Server/ Version 3.00 of May/21/2012
+    Date: 2014-10-27 20:33:49 GMT
+    Connection: close
+    Content-Type: text/html;
+    charset=utf-8
+    Accept-Ranges: bytes
+    Content-Length: 4056
 
-(FourOhFourRequest,80,"HTTP/1\.1\x20404\x20Not\x20Found\r\nContent-Type:\x20text/html\r\nContent-Length:\x2057\r\n\r\n<html><body><h2>Error:\x20404\x20/\x20Not\x20Found</h2></body></html>");
+    <!DOCTYPE html PUBLIC \"-//W3C//DTD XHTML 1.0 Strict//EN\"
 
-Windows 7 System (Pri)
+    \"http://www\.w3\.org/TR/xhtml1/DTD/xhtml1-strict\.dtd\">
+    <html xmlns=\"http://www\.w3\.org/1999/xhtml\">
+    <head>
+      <title>CodeMeter | WebAdmin</title>
+      <meta http-equiv=\"Content-Type\" content=\"text/html;charset=utf-8\" />
+      <meta name=\"WIBU-SYSTEMS HTML Served Page\" content=\"Data\" />
+      <link rel=\"stylesheet\" href=\"Style\.css\" type=\"text/css\" media=\"screen\" />
+      <link rel=\"SHORTCUT ICON\" href=\"favicon\.ico\" />
+
+      <!-- FileVersion=4\.50\.897\.500 -->
+      <script type=\"text/javascript\">
+        function popUpCenteredWindow\(\) {
+            var iMyWidth;
+            var iMyHeight;
+            iMyWidth = \(window\.screen\.width/2\) - \(100 \+ 10\);
+            iMyHeight = \(windo
+
+  FourOhFourRequest
+    HTTP/1.1 404 Not Found
+    Content-Type: text/html
+    Content-Length: 57
+
+    <html><body><h2>Error: 404  Not Found</h2></body></html>

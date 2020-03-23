@@ -1,13 +1,73 @@
-SF-Port2556-TCP:V=6.46
+Actiontec wireless broadband router provided by Verizon
 
-(GenericLines,181,"HTTP/1\.0\x20400\x20Bad\x20Request\r\nContent-Type:\x20text/html\r\nCache-Control:\x20public\r\nPragma:\x20cache\r\nExpires:\x20Wed,\x2022\x20Oct\x202014\x2019:40:14\x20GMT\r\nDate:\x20Wed,\x2022\x20Oct\x202014\x2019:40:14\x20GMT\r\nLast-Modified:\x20Wed,\x2022\x20Oct\x202014\x2019:40:14\x20GMT\r\nAccept-Ranges:\x20bytes\r\nConnection:\x20close\r\n\r\n<html>\n<head>\n\x20\x20<title>400\x20Bad\x20Request</title>\n</head>\n<body\x20bgcolor=\"ffffff\">\n\x20\x20<h2>400\x20Bad\x20Request<h2>\n\x20\x20<p>\n\x20\x20\n</body>\n</html>\n")
+This is a UPnP service
 
-(GetRequest,1A9,"HTTP/1\.0\x20500\x20Internal\x20Server\x20Error\r\nContent-Type:\x20text/html\r\nCache-Control:\x20public\r\nPragma:\x20cache\r\nExpires:\x20Wed,\x2022\x20Oct\x202014\x2019:40:15\x20GMT\r\nDate:\x20Wed,\x2022\x20Oct\x202014\x2019:40:15\x20GMT\r\nLast-Modified:\x20Wed,\x2022\x20Oct\x202014\x2019:40:15\x20GMT\r\nAccept-Ranges:\x20bytes\r\nConnection:\x20close\r\n\r\n<html>\n<head>\n\x20\x20<title>500\x20Internal\x20Server\x20Error</title>\n</head>\n<body\x20bgcolor=\"ffffff\">\n\x20\x20<h2>500\x20Internal\x20Server\x20Error<h2>\n\x20\x20<p>\n\x20\x20CGI\x20Failed\n</body>\n</html>\n")
+2556/tcp
+  GenericLines
+    HTTP/1\.0 400 Bad Request
+    Content-Type: text/html
+    Cache-Control: public
+    Pragma: cache
+    Expires: Wed, 22 Oct 2014 19:40:14 GMT
+    Date: Wed, 22 Oct 2014 19:40:14 GMT
+    Last-Modified: Wed, 22 Oct 2014 19:40:14 GMT
+    Accept-Ranges: bytes
+    Connection: close
 
-(HTTPOptions,18D,"HTTP/1\.0\x20501\x20Not\x20Implemented\r\nContent-Type:\x20text/html\r\nCache-Control:\x20public\r\nPragma:\x20cache\r\nExpires:\x20Wed,\x2022\x20Oct\x202014\x2019:40:15\x20GMT\r\nDate:\x20Wed,\x2022\x20Oct\x202014\x2019:40:15\x20GMT\r\nLast-Modified:\x20Wed,\x2022\x20Oct\x202014\x2019:40:15\x20GMT\r\nAccept-Ranges:\x20bytes\r\nConnection:\x20close\r\n\r\n<html>\n<head>\n\x20\x20<title>501\x20Not\x20Implemented</title>\n</head>\n<body\x20bgcolor=\"ffffff\">\n\x20\x20<h2>501\x20Not\x20Implemented<h2>\n\x20\x20<p>\n\x20\x20\n</body>\n</html>\n")
+    <html>
+    <head>
+      <title>400 Bad Request</title>
+    </head>
+    <body\x20bgcolor=\"ffffff\">
+      <h2>400 Bad Request<h2>
+      <p>
+      
+      </body>
+    </html>
 
-(RTSPRequest,18D,"HTTP/1\.0\x20501\x20Not\x20Implemented\r\nContent-Type:\x20text/html\r\nCache-Control:\x20public\r\nPragma:\x20cache\r\nExpires:\x20Wed,\x2022\x20Oct\x202014\x2019:40:15\x20GMT\r\nDate:\x20Wed,\x2022\x20Oct\x202014\x2019:40:15\x20GMT\r\nLast-Modified:\x20Wed,\x2022\x20Oct\x202014\x2019:40:15\x20GMT\r\nAccept-Ranges:\x20bytes\r\nConnection:\x20close\r\n\r\n<html>\n<head>\n\x20\x20<title>501\x20Not\x20Implemented</title>\n</head>\n<body\x20bgcolor=\"ffffff\">\n\x20\x20<h2>501\x20Not\x20Implemented<h2>\n\x20\x20<p>\n\x20
-\x20\n</body>\n</html>\n");
 
-This is a UPnP port
-Actiontec wireless broadband router
+  GetRequest
+    HTTP/1\.0 500 Internal Server Error
+    Content-Type: text/html
+    Cache-Control: public
+    Pragma: cache
+    Expires: Wed, 22 Oct 2014 19:40:15 GMT
+    Date: Wed, 22 Oct 2014 19:40:15 GMT
+    Last-Modified: Wed, 22 Oct 2014 19:40:15 GMT
+    Accept-Ranges: bytes
+    Connection: close
+
+    <html>
+    <head>
+      <title>500 Internal Server Error</title>
+    </head>
+    <body bgcolor=\"ffffff\">
+      <h2>500 Internal Server Error<h2>
+      <p>
+      CGI Failed
+    </body>
+    </html>
+
+
+  HTTPOptions, RTSPRequest
+    HTTP/1\.0 501 Not Implemented
+    Content-Type: text/html
+    Cache-Control: public
+    Pragma: cache
+    Expires: Wed, 22 Oct 2014 19:40:15 GMT
+    Date: Wed, 22 Oct 2014 19:40:15 GMT
+    Last-Modified: Wed, 22 Oct 2014 19:40:15 GMT
+    Accept-Ranges: bytes
+    Connection: close
+
+    <html>
+    <head>
+      <title>501 Not Implemented</title>
+    </head>
+    <body bgcolor=\"ffffff\">
+      <h2>501 Not Implemented<h2>
+      <p>
+      
+    </body>
+    </html>
+
