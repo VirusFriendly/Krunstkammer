@@ -1,0 +1,22 @@
+Discord API, binds to localhost
+
+6463/tcp
+  GetRequest, FourOhFourRequest:
+    HTTP/1\.1 401 Unauthorized
+    Content-Length: 45
+    Content-Type: application/json
+    Date: Thu, 19 Mar 2020 13:45:48 GMT
+    Connection: close
+    
+    {"code":0,"message":"Authorization Required"}
+  HTTPOptions:
+    HTTP/1\.1 200 OK
+    Content-Length: 11
+    Content-Type: application/json
+    Date: Thu, 19 Mar 2020 13:45:48 GMT
+    Connection: close
+    
+    {"body":""}
+  RTSPRequest, RPCCheck, DNSVersionBindReq, DNSStatusRequest, Help, SSLSessionReq, TLSSessionReq, Kerberos, SMBProgNeg, X11Probe, LPDString, LDAPSearchReq, LDAPBindReq, SIPOptions, LANDesk-RC:
+    HTTP/1\.1 400 Bad Request
+    Connection: close
