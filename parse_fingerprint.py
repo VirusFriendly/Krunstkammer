@@ -149,8 +149,8 @@ def svc_fingerprint_report(categories):
         # No idea yet what this is for
         report.append("I=" + categories["SCAN"]['I'])
     
-    if "Port" in categories["SCAN"].keys():
-        port = categories["SCAN"]["Port"]
+    if "Port" in categories.keys():
+        port = categories["Port"]
         report.append(port[:port.find('-')] + '/' + port[port.find('-')+1:].lower())
     
     # Parse Probe Responses
@@ -162,7 +162,7 @@ def svc_fingerprint_report(categories):
         
         probe_responses[response].append(probe)
     
-    report.append("Probe-Responces:")
+    report.append("Probe-Responses:")
 
     for response in probe_responses.keys():
         report.append("|  " + ", ".join(probe_responses[response]) + ':')
