@@ -1,0 +1,10 @@
+This is from a Q-see Wireless Camera NVR (Network Video Recorder)
+Its a Real Time Streaming Protocol (RTSP) nothing to reverse engineer
+Curios that Nmap doesn't recognize it
+
+554/tcp
+   SIPOptions:
+     RTSP/1\.0 401 Unauthorized
+     CSeq: 42
+     WWW-Authenticate: Digest realm="Login to 4L09D33PAZDB440", nonce="eb44cadb027656646ec598cbe7a80a44"
+     

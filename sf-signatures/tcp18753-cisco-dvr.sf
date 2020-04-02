@@ -1,0 +1,5 @@
+This is from a Cisco (Scientific Atlantic) DVR set-top box provided by my ISP at the time (Either Comcast or Verizon)
+
+18753/tcp
+  GenericLines, GetRequest, HTTPOptions, RTSPRequest, RPCCheck, DNSVersionBindReq, DNSStatusRequest, Help, SSLSessionReq, Kerberos, SMBProgNeg, X11Probe, FourOhFourRequest, LPDString, LDAPBindReq, LDAPBindReq, SIPOptions, LANDesk-RC, TerminalServer, NCP, NotesRPC, WMSRequest, oracle-tns, afp, kumo-server
+    00000021BEC38167

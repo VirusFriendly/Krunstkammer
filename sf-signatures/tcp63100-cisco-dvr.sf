@@ -1,0 +1,30 @@
+Cisco (Scientifc Atlantic) DVR Logging port
+
+63100/tcp
+  GenericLines
+    CIS:10/28/14-16:07:00 Bytest read us 4 Fn:WaitForTCPMessage at ln\[505\] 
+    CIS:10/28/14-16:07:00 Executing DVR DiagCommand : 0  With Arg1=0 Arg2=0 
+    Executing DVR DiagCommand : 0  With Arg1=0 Arg2=0 
+    CIS:10/28/14-16:07:00 SendBuffer Len 3908CIS:10/28/14-16:07:00 !!!!!!!!!!LERROR IS : 0   598
+    CIS:10/28/14-16:07:00 Search_DVR_Task_SocketAccept ready to upload DVR data from HUB and in listening state
+    CIS:10/28/14-16:07:01 Search/Search\.new/dvr/SearchDVRTask\.c SRCH_MW_DVRMessageSent 634
+    CIS:10/28/14-16:07:01 !!!!!!!!!!LERROR IS : 0   0
+    CIS:10/28/14-16:07:01 Search_DVR_Task_SocketAccept ready to upload DVR data from HUB and in listening state
+    CIS:10/28/14-16:07:01 !!!!!!!!!!LERROR IS : 0   0
+    CIS:10/28/14-16:07:02 Search_DVR_Task_SocketAccept ready to upload DVR data from HUB and in listening state
+    CIS:10/28/14-16:07:02 !!!!!!!!!!LERROR IS : 0   0
+    CIS:10/28/14-16:07:02 Search_DVR_Task_SocketAcce
+  GetRequest
+    CIS:10/28/14-16:07:05 Bytest read us 18 Fn:WaitForTCPMessage at ln\[505\] 
+    CIS:10/28/14-16:07:05 Executing DVR DiagCommand : 0  With Arg1=0 Arg2=0 
+    Executing DVR DiagCommand : 0  With Arg1=0 Arg2=0 
+    CIS:10/28/14-16:07:05 !!!!!!!!!!LERROR IS : 0   0
+    CIS:10/28/14-16:07:05 Search_DVR_Task_SocketAccept ready to upload DVR data from HUB and in listening state
+    CIS:10/28/14-16:07:05 !!!!!!!!!!LERROR IS : 0   0
+    CIS:10/28/14-16:07:05 Search_DVR_Task_SocketAccept ready to upload DVR data from HUB and in listening state
+    CIS:10/28/14-16:07:06 !!!!!!!!!!LERROR IS : 0   0
+    CIS:10/28/14-16:07:06 Search_DVR_Task_SocketAccept ready to upload DVR data from HUB and in listening state
+    CIS:10/28/14-16:07:06 !!!!!!!!!!LERROR IS : 0   0
+    CIS:10/28/14-16:07:06 Search_DVR_Task_SocketAccept ready to upload DVR data from HUB and in listening state
+    CIS:10/28/14-16:07:07 !!!!!!!!!!LERROR IS : 0   0
+    CIS:10/28/14-16:07:

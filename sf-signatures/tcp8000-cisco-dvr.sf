@@ -1,0 +1,15 @@
+Cisco (Scientific Atlantic) DVR
+
+8000/tcp
+  RPCCheck
+    \x01\0\x08\n\0\0\x04\x08\0\0\x07\x01\0\x08\n\0\0\x04\x08\0\0\x07
+  Kerberos
+    \x01\0\x08\n\0\x81\x04\x08\0k\x07
+  SMBProgNeg
+    \x01\0\x08\n\0\0\x04\x08\0\0\x07\x01\0\x08\n\0\0\x04\x08\0\0\x07\x01\0\x08\n\0\0\x04\x08\0\0\x07
+  TerminalServer
+    \x01\0\x08\n\0\0\x04\x08\0\0\x07
+  NotesRPC
+    \x01\0\x08\n\0\0\x04\x08\0\0\x07
+  WMSRequest
+    \x01\0\x08\n\0\0\x04\x08\0\0\x07

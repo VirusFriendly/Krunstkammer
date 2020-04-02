@@ -1,0 +1,22 @@
+This was on my personal Samsung phone.
+
+Searching for DoaHTTP server show up other Samsung specific data, but not a lot of actual details. Worthy of further research.
+
+33003/tcp
+  GetRequest, FourOhFourRequest
+    HTTP/1\.1 404 Not Found
+    Content-Type: text/html; charset=\"utf-8\"
+    Server: Linux/2\.6\.35\.11-T769UVLF5-CL946413 DoaHTTP
+    Content-Length: 0
+    Date: Mon, 27 Oct 2014 16:33:26 GMT
+
+
+
+  HTTPOptions, RTSPRequest, SIPOptions
+    HTTP/1\.1 400 Bad Request
+    Content-Type: text/html; charset=\"utf-8\"
+    Server: Linux/2\.6\.35\.11-T769UVLF5-CL946413 DoaHTTP
+    Content-Length: 0
+    Date: Mon, 27 Oct 2014 16:33:26 GMT
+
+

@@ -1,0 +1,14 @@
+Cisco DLNA UPnP port.
+/upnp_descriptor_0
+/scpd/ContentDirectory_DMS
+
+9999/tcp
+  GetRequest, HTTPOptions, FourOhFourRequest, RTSPRequest, SIPOptions
+    HTTP/1\.1 404 Page not found
+    Content-type: text/html
+    Content-length: 31
+    Server: Cisco-MWEB/1\.8\.225
+    Connection: close
+
+    <h1>Error</h1>Page not found!
+

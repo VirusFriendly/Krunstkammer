@@ -1,0 +1,42 @@
+Found on a Windows 7 system
+
+https://www.wibu.com/us/products/codemeter.html
+
+"Wibu-Systems | Software Protection, Software Licensing, Access Protection, Document Protection"
+
+22350/tcp
+  GetRequest
+    HTTP/1.1 200 OK
+    Server: WIBU-SYSTEMS HTTP Server/ Version 3.00 of May/21/2012
+    Date: 2014-10-27 20:33:49 GMT
+    Connection: close
+    Content-Type: text/html;
+    charset=utf-8
+    Accept-Ranges: bytes
+    Content-Length: 4056
+
+    <!DOCTYPE html PUBLIC \"-//W3C//DTD XHTML 1.0 Strict//EN\"
+
+    \"http://www\.w3\.org/TR/xhtml1/DTD/xhtml1-strict\.dtd\">
+    <html xmlns=\"http://www\.w3\.org/1999/xhtml\">
+    <head>
+      <title>CodeMeter | WebAdmin</title>
+      <meta http-equiv=\"Content-Type\" content=\"text/html;charset=utf-8\" />
+      <meta name=\"WIBU-SYSTEMS HTML Served Page\" content=\"Data\" />
+      <link rel=\"stylesheet\" href=\"Style\.css\" type=\"text/css\" media=\"screen\" />
+      <link rel=\"SHORTCUT ICON\" href=\"favicon\.ico\" />
+
+      <!-- FileVersion=4\.50\.897\.500 -->
+      <script type=\"text/javascript\">
+        function popUpCenteredWindow\(\) {
+            var iMyWidth;
+            var iMyHeight;
+            iMyWidth = \(window\.screen\.width/2\) - \(100 \+ 10\);
+            iMyHeight = \(windo
+
+  FourOhFourRequest
+    HTTP/1.1 404 Not Found
+    Content-Type: text/html
+    Content-Length: 57
+
+    <html><body><h2>Error: 404  Not Found</h2></body></html>

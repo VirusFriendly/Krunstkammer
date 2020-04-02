@@ -1,0 +1,73 @@
+Actiontec wireless broadband router provided by Verizon
+
+This is a UPnP service
+
+2555/tcp
+  GenericLines
+    HTTP/1.0 400 Bad Request
+    Content-Type: text/html
+    Cache-Control: public
+    Pragma: cache
+    Expires: Wed, 22 Oct 2014 19:40:14 GMT
+    Date: Wed, 22 Oct 2014 19:40:14 GMT
+    Last-Modified: Wed, 22 Oct 2014 19:40:14 GMT
+    Accept-Ranges: bytes
+    Connection: close
+
+    <html>
+    <head>
+      <title>400 Bad Request</title>
+    </head>
+    <body bgcolor=\"ffffff\">
+      <h2>400 Bad Request<h2>
+    <p>
+      
+    </body>
+    </html>
+
+
+  GetRequest
+    HTTP/1.0 500 Internal Server Error
+    Content-Type: text/html
+    Cache-Control: public
+    Pragma: cache
+    Expires: Wed, 22 Oct 2014 19:40:15 GMT
+    Date: Wed, 22 Oct 2014 19:40:15 GMT
+    Last-Modified: Wed, 22 Oct 2014 19:40:15 GMT
+    Accept-Ranges: bytes
+    Connection: close
+
+    <html>
+    <head>
+      <title>500 Internal Server Error</title>
+    </head>
+    <body bgcolor=\"ffffff\">
+      <h2>500 Internal Server Error<h2>
+      <p>
+      CGI Failed
+    </body>
+    </html>
+
+
+  HTTPOptions, RTSPRequest
+    HTTP/1.0 501 Not Implemented
+    Content-Type: text/html
+    Cache-Control: public
+    Pragma: cache
+    Expires: Wed, 22 Oct 2014 19:40:15 GMT
+    Date: Wed, 22 Oct 2014 19:40:15 GMT
+    Last-Modified: Wed, 22 Oct 2014 19:40:15 GMT
+    Accept-Ranges: bytes
+    Connection: close
+
+    <html>
+    <head>
+      <title>501 Not Implemented</title>
+    </head>
+    <body bgcolor=\"ffffff\">
+      <h2>501 Not Implemented<h2>
+      <p>
+      
+    </body>
+    </html>
+
