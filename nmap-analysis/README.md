@@ -1,14 +1,8 @@
-# nmap-scripts
-My personal collection of Nmap scripts and tools
-
-## sf-signatures
-I am a hunter of unknown (at least to me) protocols, this is where I keep the service fingerprints of new protocols I come across for future research.
-
-## nse-scripts
-Largely insignificant nse scripts I made, mainly for the purpose of getting used to the nse api. Perhaps in the future I'll make more significant scripts.
+# Nmap Analysis Scripts
+Collection of tools to analyze Nmap output either for new unknown protocols or special details
 
 ## parse_fingerprint module
-This is probably the reason you're looking at this repo. If you have a Nmap OS or Service fingerprint, this module will clean it up and give you and information dump of what was in the fingerprint.
+If you have a Nmap OS or Service fingerprint block, this module will clean it up and give you and information dump of what was in the fingerprint.
 
 Its a module, so if you don't like the report format, you can still use the parser and have it formatted anyway you like.
 
